@@ -790,10 +790,10 @@ PrintPiholeStats() {
     CleanPrintf " %-10s%-39s\e[0K\\n" "Pi-holed:" "${ads_blocked_today} out of ${dns_queries_today}"
     CleanPrintf " %-10s%-39s\e[0K\\n" "Latest:" "${latest_blocked}"
     CleanPrintf " %-10s%-39s\e[0K\\n" "Top Ad:" "${top_blocked}"
-    if [ "${DHCP_ACTIVE}" != "true" ]; then
-      CleanPrintf " %-10s%-39s\e[0K\\n" "Top Dmn:" "${top_domain}"
-      CleanPrintf " %-10s%-39s\e[0K\\n" "Top Clnt:" "${top_client}"
-    fi
+#    if [ "${DHCP_ACTIVE}" != "true" ]; then
+#      CleanPrintf " %-10s%-39s\e[0K\\n" "Top Dmn:" "${top_domain}"
+#      CleanPrintf " %-10s%-39s\e[0K\\n" "Top Clnt:" "${top_client}"
+#    fi
   elif [ "$1" = "regular" ] || [ "$1" = "slim" ]; then
     CleanEcho "${bold_text}STATS =====================================================${reset_text}"
     CleanPrintf " %-10s%-49s\e[0K\\n" "Blocking:" "${domains_being_blocked} domains"
@@ -801,18 +801,18 @@ PrintPiholeStats() {
     CleanPrintf " %-10s%-49s\e[0K\\n" "Pi-holed:" "${ads_blocked_today} out of ${dns_queries_today} queries"
     CleanPrintf " %-10s%-39s\e[0K\\n" "Latest:" "${latest_blocked}"
     CleanPrintf " %-10s%-39s\e[0K\\n" "Top Ad:" "${top_blocked}"
-    if [ "${DHCP_ACTIVE}" != "true" ]; then
-      CleanPrintf " %-10s%-39s\e[0K\\n" "Top Dmn:" "${top_domain}"
-      CleanPrintf " %-10s%-39s\e[0K\\n" "Top Clnt:" "${top_client}"
-    fi
+#    if [ "${DHCP_ACTIVE}" != "true" ]; then
+#      CleanPrintf " %-10s%-39s\e[0K\\n" "Top Dmn:" "${top_domain}"
+#      CleanPrintf " %-10s%-39s\e[0K\\n" "Top Clnt:" "${top_client}"
+#    fi
   else
     CleanEcho "${bold_text}STATS =========================================================================${reset_text}"
     CleanPrintf " %-10s%-19s %-10s[%-40s] %-5s\e[0K\\n" "Blocking:" "${domains_being_blocked} domains" "Piholed:" "${ads_blocked_bar}" "${ads_percentage_today}%"
     CleanPrintf " %-10s%-30s%-29s\e[0K\\n" "Clients:" "${clients}" " ${ads_blocked_today} out of ${dns_queries_today} queries"
     CleanPrintf " %-10s%-39s\e[0K\\n" "Latest:" "${latest_blocked}"
     CleanPrintf " %-10s%-39s\e[0K\\n" "Top Ad:" "${top_blocked}"
-    CleanPrintf " %-10s%-39s\e[0K\\n" "Top Dmn:" "${top_domain}"
-    CleanPrintf " %-10s%-39s\e[0K\\n" "Top Clnt:" "${top_client}"
+#    CleanPrintf " %-10s%-39s\e[0K\\n" "Top Dmn:" "${top_domain}"
+#    CleanPrintf " %-10s%-39s\e[0K\\n" "Top Clnt:" "${top_client}"
     CleanEcho "FTL ==========================================================================="
     CleanPrintf " %-10s%-9s %-10s%-9s %-10s%-9s\e[0K\\n" "PID:" "${ftlPID}" "CPU Use:" "${ftl_cpu}%" "Mem. Use:" "${ftl_mem_percentage}%"
     CleanPrintf " %-10s%-69s\e[0K\\n" "DNSCache:" "${cache_inserts} insertions, ${cache_deletes} deletions, ${cache_size} total entries"
